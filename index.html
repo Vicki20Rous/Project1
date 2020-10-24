@@ -17,47 +17,70 @@
     <title>Happy Trails</title>
   </head>
   <body>
-    
-<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
+
+    <nav>
+      <div class="nav-wrapper #2e7d32 green darken-3
+      ">
+        <img border="0" alt="Happys Trails logo" src="./assets/images/PROJ-1 LOGO SAMPLE.png" width="65" height="55">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
-        
-    <img
-      src="https://files.slack.com/files-pri/T019A0SE3U2-F01CR679JA3/proj-1_logo_sample.png"
-      alt="Happy_Trails
-_logo"
-      width="10%"
-      height="10%"
-    />
-    <h1>Happy Trails</h1>
-
-    <div class="input">
+    <img src="./assets/images/unnamed.jpg" alt="Grand Canyon Trail" width="100%">
+    <aside class="input">
       <input type="text" class="inputValue" placeholder="Enter a zipcode" />
       <input type="submit" value=" submit" class="button" />
-    </div>
-    <div class="hikeBox">
-      <input type="text" class="hikeBox" placeholder="enter hiking trail" />
-    </div>
+      <div class="row">
+      <ul class="cityList"></ul>
+      </div>
+    </aside>
 
+  <main class="container">
+    <div class="row">
+      <div class="col-md-4">
+
+
+      </div>
+    </div>
+   
+      
+    
+
+      <!--gets weather-->
     <div class="display">
       <h1 class="name"></h1>
-      <p class="desc"></p>
-      <p class="temp"></p>
       <p class="icon"></p>
+      <p class="temp"></p>
     </div>
-    <img
-      src="https://files.slack.com/files-pri/T019A0SE3U2-F01DJH32DU1/backwoods_-_copy.jpg"
-      width="25%"
-      height="25%"
-    />
+     <!--end-->
 
+    <!--will display a card deck of trails and display description of duration/miles & elevation (can all be built dynamically using javascript-->
+    <div class="row">
+      <div class="col s12 m7">
+        <div class="card">
+          <div class="card-image">
+            <img src="images/sample-1.jpg">
+            <span class="card-title">Card Title</span>
+          </div>
+          <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information.
+            I am convenient because I require little markup to use effectively.</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!--end single card-->
+
+    
+
+
+
+      </main>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
