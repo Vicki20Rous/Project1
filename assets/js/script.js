@@ -1,7 +1,40 @@
+const API_KEY ="e063281f4936be92105758e9da02670d"
+
+async function currentWeather(city){
+  const url= `"https://api.weatherstack.com/current&units=m=609c6ca41a9803f4a3b46553fc8f5c5c"`
+  
+  return await $.ajax({
+      url: url, 
+      method: "GET"
+      });
+  }
+// display the trails
+
+  function renderDayCard (){ 
+    $('#cards').empty();
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + locationName + "&units=imperial&appid=ed2ee741f61d9d60983426ca204e9ed6";
+    $.ajax ({
+        url: queryURL,
+        method: "GET"
+    }).then(function (response){
+for(var i = 0; i < response.list.length; i++){
+    if (response.list[i].dt_txt[12] === "5") {
+    console.log(response.list[i].dt_txt);
+     var card = $('<section>').addClass("card text-black bg-primary text-white").attr("style", "width: 7rem;");
+     var cardBody = $('<div>').addClass("card-body");
+    var cardDay = $('<h4>').addClass("card-title").text(moment.unix(response.list[i].dt).format("MM/DD/YYYY"));
+    var cardTemp = $('<p>').addClass('card-text').text("Temp:" + response.list[i].main.temp + "F");
+    var cardHumidity = $('<p>').addClass("card-text").text("Humidity: " + response.list[i].main.humidity + "%");
+    var cardImg = $('<img>').attr("src","http://openweathermap.org/img/w/" + image + ".png");
+     cardBody.append(cardDay, cardImg, cardTemp, cardHumidity);
+     card.append(cardBody);
+    $("#cards").append(card);
+    }
+}
+ })
+}
+
 //weather API key
-fetch(
-  "https://api.weatherstack.com/current&units=m=609c6ca41a9803f4a3b46553fc8f5c5c"
-);
 
 //hiking API Key
 fetch(
@@ -14,3 +47,6 @@ fetch(
 // color codes the trail ( "green" shortest distance, "yellow" < 7 mile hike, advanced > more than 7 mile hike (red))
 // get elevation and apply to the trails
 
+$("#button").on("click", async function(event){
+  var userinput= $("input").val()
+  const currentWeatherResponse= await currentWeather(userinput)
