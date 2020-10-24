@@ -19,18 +19,25 @@
   <body>
 
     <nav>
-      <div class="nav-wrapper #2e7d32 green darken-3
+      <div class="nav-wrapper #2e7d32 green darken-3 center-align
       ">
-        <img border="0" alt="Happys Trails logo" src="./assets/images/PROJ-1 LOGO SAMPLE.png" width="65" height="55">
+        <img alt="Happys Trails logo" src="./assets/images/PROJ-1 LOGO SAMPLE.png" width="65" height="55"/>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
+
     <img src="./assets/images/unnamed.jpg" alt="Grand Canyon Trail" width="100%">
     <aside class="input">
-      <input type="text" class="inputValue" placeholder="Enter a zipcode" />
-      <input type="submit" value=" submit" class="button" />
+      <input type="text" class="center-align" placeholder="Enter a zipcode"  maxlength="5" size="5" />
+      <div class="center-align">
+      <button class="btn waves-effect waves-light #2e7d32 green darken-3" type="submit" name="action">Submit
+        <i class="material-icons right"></i>
+      </button>
+    </div>
+
+      <!-- <input type="submit" class="button center-align" value="submit"/> -->
       <div class="row">
       <ul class="cityList"></ul>
       </div>
