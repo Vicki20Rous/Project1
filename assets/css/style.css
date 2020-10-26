@@ -5,22 +5,49 @@
 
 }
 
+body {
+  background: url("/assets/images/background.png")repeat-y center;
+}
+
 .input {
-    margin-left: 30rem;
+    font-family: 'Comfortaa', cursive;
+    /* display: flex; */
+    align-content: center;
     text-align: center;
-    width: 25%;
-    height: 25%;
+    width: 25vw;
+    height: 17vh;
     border: 3px solid #66bb6a;
     background-color: white;
-    padding: 5px;
-    border-radius: 30px;
-    box-shadow: 0px 4px 2px 0px;
+    padding: 4px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px lightgrey;
+}
+
+.btn {
+  justify-content: center;
+  flood-opacity: 30%;
+  width: 12vw;
+  background-color: #66bb6a;
+  border-color: #66bb6a;
+  border-radius: 10px;
 }
 
 .logo {
   font-family: 'Comfortaa', cursive;
-  font-size: 36px;
+  font-size: 42px;
   padding-top: 2px;
   margin-top: 2px;
-  font-stretch: wider;
+}
+
+aside {
+  /* align-content: center;
+  justify-content: center; */
+  margin: auto;
+}
+
+.m6 {
+  margin: auto;
+  justify-content: center;
+  display: flex;
+
 }
