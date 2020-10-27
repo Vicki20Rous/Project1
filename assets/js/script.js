@@ -1,4 +1,7 @@
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 var todayDate;
 var cityName=[];
 var image;
@@ -13,6 +16,7 @@ console.log(cityName)
 
 
 // display the trails
+<<<<<<< Updated upstream
 //const API_KEY ="e063281f4936be92105758e9da02670d"
 
 var currentForecast; 
@@ -65,14 +69,19 @@ $.ajax({
 //}
  //})
 //}
+=======
+>>>>>>> Stashed changes
 
 //weather API key
 
 //hiking API Key
+<<<<<<< Updated upstream
 function trailData() {
   var lat = 40.0274;
   var lon = -105.2519;
 
+=======
+>>>>>>> Stashed changes
 $.ajax({
  //url:"https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200952288-580b87b672e00ea3e6f7ec1e05ad0bb9",
  url:"https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lon + "&maxDistance=10&key=200952288-580b87b672e00ea3e6f7ec1e05ad0bb9",
@@ -80,8 +89,11 @@ $.ajax({
 }).then(function(response) {
 console.log(response)
 })
+<<<<<<< Updated upstream
 }
   trailData ();
+=======
+>>>>>>> Stashed changes
 
 //enter zip code (saves zip to local storage) append to a button to select previous location
 // displays weather (Location & Day)
@@ -89,7 +101,10 @@ console.log(response)
 // color codes the trail ( "green" shortest distance, "yellow" < 7 mile hike, advanced > more than 7 mile hike (red))
 // get elevation and apply to the trails
 
+<<<<<<< Updated upstream
 
 //$("#button").on("click", async function(event){
   //var userinput= $("input").val()
   //const currentWeatherResponse= await currentWeather(userinput)
+=======
+>>>>>>> Stashed changes
