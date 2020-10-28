@@ -40,21 +40,13 @@ src="https://code.jquery.com/jquery-3.5.1.min.js"
     <img src="./assets/images/grand-canyon.jpg" alt="Grand Canyon Trail" width="100%">
     <main class="row">
       <div class="col">
-        <p>safasdfasd</p>
+        <p></p>
       </div>
     
     
-      <div class="row">
-        <aside class="input">
-          <input type="text" class="center-align" placeholder="Enter a Zip Code"  maxlength="5" size="5" />
-          <div class="center-align">
-          <button class="btn #2e7d32 green darken-3" type="submit" name="action">Search
-            <i class="material-icons right"></i>
-          </button>
-        <div class="col">
-          
-        </div>
-      </div>
+      <input placeholder="City/ZIP"id="search"><select id="units"><option value="f">Fahrenheit</option><option value="m">Celcius</option></select><button onclick="getWeather()">Get Weather!</button><br>
+        <img id="image" style="border-radius: 5px;"/>
+        <div id="output"></div>
 
 
 
@@ -69,7 +61,7 @@ src="https://code.jquery.com/jquery-3.5.1.min.js"
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-
+        <div id="cards"></div>
 
       </div>
     </div>
