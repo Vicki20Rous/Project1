@@ -6,7 +6,7 @@
 
 button {
   display: inline-flex;
-  margin-left: 10rem;
+  margin-left: 1rem;
   padding: 5px;
   height: 6vh;
 }
@@ -14,6 +14,16 @@ button {
 input {
   text-align: center;
   width: 3rem;
+}
+
+.col.s4 {
+  align-content: center;
+  border: 2px solid hotpink;
+  display: inline-flex;
+  /* margin-top: 5px; */
+  margin: 10px 10px;
+  padding: 10px 10px;
+  width: 100vw;
 }
 
 .logo {
