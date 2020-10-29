@@ -26,28 +26,48 @@ $(document).ready(function () {
 
 
   //hiking API Key
-  function trailData() {
-    var lat = 40.0274;
-    var lon = -105.2519;
+function trailData(lat,lon) {
+  // var lat = 40.0274;
+  // var lon = -105.2519;
 
-    $.ajax({
-      url: "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lon + "&maxDistance=10&key=200952288-580b87b672e00ea3e6f7ec1e05ad0bb9",
-      method: "GET"
-    }).then(function (response) {
-      console.log(response)
-    })
-  }
-  trailData();
-
-  //enter zip code (saves zip to local storage) append to a button to select previous location
-  // displays weather (Location & Day)
-  // displays 6 cards (closets)
-  // color codes the trail ( "green" shortest distance, "yellow" < 7 mile hike, advanced > more than 7 mile hike (red))
-  // get elevation and apply to the trails
+  $.ajax({
+    //url:"https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200952288-580b87b672e00ea3e6f7ec1e05ad0bb9",
+    url: "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lon + "&maxDistance=10&key=200952288-580b87b672e00ea3e6f7ec1e05ad0bb9",
+    method: "GET"
+  }).then(function (response) {
+    console.log(response)
+const trails= response.trails.map(function(trail){
 
 
-  $("button").on("click", function () {
-    //var userinput= $("input").val()
-    //renderDayCard(userinput)
-  })
+const trailTemplate = `
+<div class="card">
+<div class="card-image">
+  <img src="${trail.imgSqSmall}" width="200" height="200">
+  <span class="card-title">${trail.name}</span>
+</div>
+<div class="card-content">
+  <p>Difficulty: ${trail.difficulty}</p>
+  <p>Rating: ${trail.stars}</p>
+</div>
+<div class="card-action">
+  <a href="${trail.url}" target="_blank">Go to the trail site</a>
+</div>
+</div>
+`
+return trailTemplate;
 })
+$("#trail-cards").html(trails.join(""))
+  })
+}
+// trailData();
+
+//enter zip code (saves zip to local storage) append to a button to select previous location
+// displays weather (Location & Day)
+// displays 6 cards (closets)
+// color codes the trail ( "green" shortest distance, "yellow" < 7 mile hike, advanced > more than 7 mile hike (red))
+// get elevation and apply to the trails
+
+
+//$("#button").on("click", async function(event){
+  //var userinput= $("input").val()
+  //const currentWeatherResponse= await currentWeather(userinput)
