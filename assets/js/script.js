@@ -10,7 +10,7 @@ $(document).ready(function () {
   function getWeather() {
     var city = document.getElementById("search").value;
     var units = document.getElementById("units").value;
-    fetch("http://api.weatherstack.com/current?access_key=e063281f4936be92105758e9da02670d&query=" + city
+    fetch("https://api.weatherstack.com/current?access_key=e063281f4936be92105758e9da02670d&query=" + city
       + "&units=" + units)
       .then(a => a.json())
       .then(response => {
