@@ -10,13 +10,14 @@ $(document).ready(function () {
   function getWeather() {
     var city = document.getElementById("search").value;
     var units = document.getElementById("units").value;
-    fetch("https://api.weatherstack.com/current?access_key=e063281f4936be92105758e9da02670d&query=" + city
+    fetch("http://api.weatherstack.com/current?access_key=b8825e7d7dff1231e64b523c6fb89e42&query=" + city
       + "&units=" + units)
       .then(a => a.json())
       .then(response => {
         console.log('======================WEATHER RESPONSE======================\n', response , '=========================================\n')
         
         document.getElementById("image").src = response.current.weather_icons[0];
+        console.log(response)
         document.getElementById("output").innerHTML = "<h3>" + response.location.name + "</h3>Temperature: " + response.current.temperature + "F" + "<br><hr>Feels like: " + response.current.feelslike + "<br><hr>UV index: " + response.current.uv_index + "<br><hr>Humidity: " + response.current.humidity + "<br><hr>Description: " + response.current.weather_descriptions;
         return {lat: response.location.lat , lon: response.location.lon}
       }).then(coords => {
